@@ -9,8 +9,8 @@
 	branch = auto
 	diff = auto
 [user]
-	name = 
-	email = 
+	name =
+	email =
 [alias]
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	st = status
