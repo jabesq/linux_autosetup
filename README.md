@@ -14,8 +14,8 @@ I would, of course, recommend using the awesome version.
 ## How to install the Awesome version?
 The awesome version includes a lot of great plugins, configurations and color schemes that make Vim a lot better. To install it simply do following from your terminal:
 
-	git clone https://github.com/amix/vimrc.git ~/.vim_runtime
-	sh ~/.vim_runtime/install_awesome_vimrc.sh
+	git clone https://github.com/amix/vimrc.git ~/linux_autosetup
+	sh ~/linux_autosetup/install_awesome_vimrc.sh
 
 I also recommend using [the Hack font](http://sourcefoundry.org/hack/) (it's a free and awesome font designed for source code). The Awesome vimrc is already setup to try to use it.
 
@@ -24,8 +24,8 @@ The basic version is just one file and no plugins. Just copy [basic.vim](https:/
 
 The basic version is useful to install on remote servers where you don't need many plugins, and you don't do many edits.
 
-	git clone git://github.com/amix/vimrc.git ~/.vim_runtime
-	sh ~/.vim_runtime/install_basic_vimrc.sh
+	git clone git://github.com/amix/vimrc.git ~/linux_autosetup
+	sh ~/linux_autosetup/install_basic_vimrc.sh
 
 
 ## How to install on Windows?
@@ -41,7 +41,7 @@ If you have vim aliased as `vi` instead of `vim`, make sure to either alias it: 
 
 Just do a git rebase!
 
-    cd ~/.vim_runtime
+    cd ~/linux_autosetup
     git pull --rebase
 
 
@@ -107,15 +107,15 @@ Remove all clutter and focus only on the essential. Similar to iA Writer or Writ
 
 ## How to include your own stuff?
 
-After you have installed the setup, you can create **~/.vim_runtime/my_configs.vim** to fill in any configurations that are important for you. For instance, my **my_configs.vim** looks like this:
+After you have installed the setup you can create **~/linux_autosetup/my_configs.vim** to fill in any configurations that are important for you. For instance, my **my_configs.vim** looks like this:
 
-	~/.vim_runtime (master)> cat my_configs.vim
+	~/linux_autosetup (master)> cat my_configs.vim
 	map <leader>ct :cd ~/Desktop/Todoist/todoist<cr>
 	map <leader>cw :cd ~/Desktop/Wedoist/wedoist<cr> 
 
 You can also install your plugins, for instance, via pathogen you can install [vim-rails](https://github.com/tpope/vim-rails):
 
-	cd ~/.vim_runtime
+	cd ~/linux_autosetup
 	git clone git://github.com/tpope/vim-rails.git sources_non_forked/vim-rails
 
 
