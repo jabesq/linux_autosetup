@@ -1,35 +1,9 @@
-# The Ultimate vimrc
+#Jabesq's linux bash autosetup
 
-Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
+## How to install the linux auto setup tool?
 
-There are two versions:
-
-* **Basic**: If you want something small just copy [basic.vim](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim) into your ~/.vimrc and you will have a great basic setup
-* **Awesome**: This includes a ton of useful plugins, color schemes and configurations
-
-I would of course recommend using the awesome version.c
-
-## How to install the Awesome version?
-The awesome version includes a lot of great plugins, configurations and color schemes that make Vim a lot better. To install it simply do following:
-
-	git clone https://github.com/amix/vimrc.git ~/linux_autosetup
-	sh ~/linux_autosetup/install_awesome_vimrc.sh
-
-I also recommend using [Source Code Pro font from Adobe](http://store1.adobe.com/cfusion/store/html/index.cfm?event=displayFontPackage&code=1960) (it's free and awesome font for writing and programming). The Awesome vimrc is already setup to try to use it
-
-## How to install the Basic version?
-The basic version is basically just one file and no plugins. You can check out [basic.vim](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim).
-
-This is useful to install on remote servers where you don't need many plugins and you don't do many edits.
-
-	git clone git://github.com/amix/vimrc.git ~/linux_autosetup
-	sh ~/linux_autosetup/install_basic_vimrc.sh
-
-
-## How to install on Windows?
-
-Use [msysgit](http://msysgit.github.com/) to checkout the repository and run the installation instructions above. No special instructions needed ;-)
-
+	git clone https://github.com/jabesq/linux_autosetup.git ~/linux_autosetup
+	sh ~/linux_autosetup/install_linux_autosetup.sh
 
 ## How to update to latest version?
 
@@ -38,6 +12,28 @@ Simply just do a git rebase!
     cd ~/linux_autosetup
     git pull --rebase
 
+##Fork from VIMRC
+
+## The Ultimate vimrc
+Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
+
+This includes a ton of useful plugins, color schemes and configurations
+
+I would of course recommend using the awesome version.c
+
+## How to install the Awesome version?
+The awesome version includes a lot of great plugins, configurations and color schemes that make Vim a lot better. To install it simply do following:
+
+	sh ~/linux_autosetup/install_awesome_vimrc.sh
+
+I also recommend using [Source Code Pro font from Adobe](http://store1.adobe.com/cfusion/store/html/index.cfm?event=displayFontPackage&code=1960) (it's free and awesome font for writing and programming). The Awesome vimrc is already setup to try to use it
+
+## How to update VIMRC to latest version?
+
+Simply just do a git rebase!
+
+    cd ~/linux_autosetup
+    git pull https://github.com/amix/vimrc.git master --rebase
 
 ## Some screenshots
 
