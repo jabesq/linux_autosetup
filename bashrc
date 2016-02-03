@@ -186,5 +186,5 @@ alias cd=cd_func
 alias e=gedit
 alias ALLupdate='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean'
 
-PATH=$PATH:$HOME/.vimpkg/bin
+PATH=$PATH
 
