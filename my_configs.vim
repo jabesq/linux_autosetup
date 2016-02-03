@@ -28,6 +28,7 @@ set scrolloff=4     " Scroll to show 4 lines above or below cursor
 set noerrorbells    " Don't beep at me
 set visualbell      " Don't beep on error
 set autoread
+set cc=80
 
 set shiftwidth=4    " Number of spaces for autoindent
 
