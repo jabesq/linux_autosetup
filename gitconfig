@@ -23,6 +23,7 @@
 	cleanws = rebase --whitespace=fix
 	ls = show --pretty=oneline --abbrev-commit --name-status
 	showtool = "!sh -c 'if [ -z $1 ]; then REVISION=HEAD; else REVISION=$1; fi; git difftool $REVISION~ $REVISION' -"
+	gblame = gui blame
 [color "diff"]
 	whitespace = red reverse
 [core]
