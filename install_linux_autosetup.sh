@@ -7,7 +7,7 @@ if ! grep -q "git-core/ppa" /etc/apt/sources.list /etc/apt/sources.list.d/*; the
 	sudo apt-get -q upgrade
 fi
 
-sudo apt-get install git terminator tree diffuse meld ctags
+sudo apt-get install git-all terminator tree diffuse meld ctags gedit-plugins nfs-common vim-gtk
 git --version
 terminator --version
 tree --version
