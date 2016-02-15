@@ -37,6 +37,8 @@ fi
 
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
     export TERM=xterm-color
+else
+    export TERM=xterm-256color
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -204,6 +206,8 @@ alias ALLupdate='sudo apt-get update && sudo apt-get upgrade -y && \
 sudo apt-get dist-upgrade -y &&  sudo apt-get autoremove && \
 sudo apt-get autoclean && [ -f /var/run/reboot-required ] && \
 shutdown -r now'
+
+alias rebash='exec -l bash'
 
 PATH=$PATH
 
