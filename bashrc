@@ -36,8 +36,6 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-    export TERM=xterm-color
-else
     export TERM=xterm-256color
 fi
 
@@ -117,6 +115,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias vim='gvim'
 
 # Edit this .bashrc file
 alias ebrc='vim ~/linux_autosetup/bashrc'
@@ -209,5 +208,6 @@ shutdown -r now'
 
 alias rebash='exec -l bash'
 
-PATH=$PATH
+export HISTTIMEFORMAT="%d/%m/%y %T "
+export PATH=$PATH
 
