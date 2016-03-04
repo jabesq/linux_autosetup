@@ -134,7 +134,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias vim='gvim'
 
 # Edit this .bashrc file
 alias ebrc='vim ~/linux_autosetup/bashrc'
@@ -226,6 +225,8 @@ sudo apt-get autoclean && [ -f /var/run/reboot-required ] && \
 shutdown -r now'
 
 alias rebash='exec -l bash'
+alias vim='gvim --remote-tab-silent'
+alias nvim-'gvim'
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export PATH=$PATH
