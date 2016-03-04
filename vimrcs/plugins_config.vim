@@ -162,6 +162,11 @@ func! SyntasticCheckCoffeescript()
 endfunc
 nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 
+"C (for u-boot)
+let g:syntastic_c_include_dirs = ['./include']
+let g:syntastic_c_remove_include_errors = 1
+let g:syntastic_c_checkers = ['checkpatch', 'gcc']
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
