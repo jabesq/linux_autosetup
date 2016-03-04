@@ -62,8 +62,6 @@ let g:NERDTreeIndicatorMapCustom = {
 set list listchars=tab:››,extends:→,trail:·
 
 source $HOME/cscope_maps.vim
-execute pathogen#infect()
-call pathogen#helptags()
 
 
 " Indent guides
