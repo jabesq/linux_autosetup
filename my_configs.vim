@@ -51,7 +51,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
-    
+
 " Show long lines and trailing spaces
 " CTRL-K -> for →
 " CTRL-K .M for ·
