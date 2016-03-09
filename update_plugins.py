@@ -17,6 +17,7 @@ from os import path
 #--- Globals ----------------------------------------------
 PLUGINS = """
 vim-linux-coding-style https://github.com/vivien/vim-linux-coding-style
+vim-indent-guides https://github.com/nathanaelkane/vim-indent-guides
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
