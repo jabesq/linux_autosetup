@@ -89,7 +89,7 @@ map <leader>nf :NERDTreeFind<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:multi_cursor_next_key="\<C-s>"
+let g:multi_cursor_next_key="\<C-m>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -169,6 +169,8 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 let g:syntastic_c_include_dirs = ['./include']
 let g:syntastic_c_remove_include_errors = 1
 let g:syntastic_c_checkers = ['checkpatch', 'gcc']
+
+let g:syntastic_quiet_messages={"level": "warnings"}  "disable warnings
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
