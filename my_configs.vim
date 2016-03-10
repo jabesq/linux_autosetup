@@ -35,7 +35,7 @@ set shiftwidth=4    " Number of spaces for autoindent
 set ignorecase      " Ignore case during search
 set smartcase       " Be case sensitive if mixed-case search term
 set incsearch
-set matchtime=3 " ... during this time
+set matchtime=3     " ... during this time
 set wildmenu
 set ttyfast
 set smartindent
@@ -63,7 +63,6 @@ let g:NERDTreeIndicatorMapCustom = {
 " CTRL-K >1 ›
 " (use :dig for a list of diagraphs)
 set list listchars=tab:››,extends:→,trail:·
-
 
 " Indent guides
 " https://github.com/nathanaelkane/vim-indent-guides
@@ -189,13 +188,7 @@ call CreateShortcut("C-e", "$<right>", "inv")
 
 " Ctrl S - Save
 call CreateShortcut("C-s", ":w<enter>", "nv", "cmdInVisual", "restoreSelectionAfter")
-call CreateShortcut("C-s", ":w<enter>i<right>", "i", "noTrailingIInInsert")
-
-
-" Ctrl Q - Duplicate Line
-call CreateShortcut("C-q", "mjyyp`jjl", "i")
-call CreateShortcut("C-q", "mjyyp`jj", "n")
-call CreateShortcut("C-q", "yP", "v")
+call CreateShortcut("C-s", ":w<enter>i<right>", "i", "notrailingiininsert")
 
 " Ctrl Down - Pagedown
 call CreateShortcut("C-Down", "20j", "inv")
@@ -247,10 +240,4 @@ call CreateShortcut("f6",":call ToggleColorColumn()<Enter>", "inv")
 
 endif " End custom key bindings
 
-""" Custom commands
 
-" :W - To write with root rights
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
-
-" :UndoCloseTab - To undo close tab
-command UndoCloseTab call OpenLastBufferInNewTab()
