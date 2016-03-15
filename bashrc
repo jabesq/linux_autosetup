@@ -220,14 +220,14 @@ cd_func ()
 alias cd=cd_func
 alias e=nvim
 alias ALLupdate='sudo apt-get update && sudo apt-get upgrade -y && \
-sudo apt-get dist-upgrade -y &&  sudo apt-get autoremove && \
-sudo apt-get autoclean && [ -f /var/run/reboot-required ] && \
-shutdown -r now'
+sudo apt-get dist-upgrade -y &&  sudo apt-get -y autoremove && \
+sudo apt-get -y autoclean && [ -f /var/run/reboot-required ] && \
+sudo shutdown -r now'
 
 alias rebash='exec -l bash'
 alias vim='gvim --remote-tab-silent'
 alias nvim='gvim'
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
-export PATH=$PATH
+export PATH=${PATH}
 
