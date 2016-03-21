@@ -180,12 +180,6 @@ nnoremap <Enter> i<Enter>
 nnoremap <Backspace> i<Backspace>
 nnoremap <Space> i<Space>
 
-" Ctrl A - Begin Line
-call CreateShortcut("C-a", "0", "inv")
-
-" Ctrl E - End Line
-call CreateShortcut("C-e", "$<right>", "inv")
-
 " Ctrl S - Save
 call CreateShortcut("C-s", ":w<enter>", "nv", "cmdInVisual", "restoreSelectionAfter")
 call CreateShortcut("C-s", ":w<enter>i<right>", "i", "notrailingiininsert")
@@ -201,9 +195,6 @@ call CreateShortcut("C-Right", "w", "nv")
 
 " Ctrl Left - Previous Word
 call CreateShortcut("C-Left", "b", "nv")
-
-" Ctrl C - Quit
-call CreateShortcut("C-c", ":call MyQuit()<enter>", "inv", "cmdInVisual")
 
 " Tab - Indent
 call CreateShortcut("Tab", ">>", "n")
