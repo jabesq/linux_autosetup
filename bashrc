@@ -131,7 +131,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # some more ls aliases
-alias ll='ls -lF'
+alias ll='ls -lFh'
 alias la='ls -A'
 alias l='ls -CF'
 
