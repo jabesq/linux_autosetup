@@ -56,6 +56,8 @@ mru.vim https://github.com/vim-scripts/mru.vim
 vim-markdown https://github.com/plasticboy/vim-markdown
 vim-linux-coding-style https://github.com/vivien/vim-linux-coding-style
 vim-indent-guides https://github.com/nathanaelkane/vim-indent-guides
+vim-gitgutter https://github.com/airblade/vim-gitgutter
+gruvbox https://github.com/morhetz/gruvbox
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
