@@ -53,6 +53,8 @@ vim-yankstack https://github.com/maxbrunsfeld/vim-yankstack
 lightline.vim https://github.com/itchyny/lightline.vim
 vim-linux-coding-style https://github.com/vivien/vim-linux-coding-style
 vim-indent-guides https://github.com/nathanaelkane/vim-indent-guides
+vim-gitgutter https://github.com/airblade/vim-gitgutter
+gruvbox https://github.com/morhetz/gruvbox
 """.strip()
 
 GITHUB_ZIP = '%s/archive/master.zip'
