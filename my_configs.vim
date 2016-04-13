@@ -175,11 +175,6 @@ function! MenuNetrw()
   endif
 endfunction
 
-" Usefull shortcuts to enter insert mode
-nnoremap <Enter> i<Enter>
-nnoremap <Backspace> i<Backspace>
-nnoremap <Space> i<Space>
-
 " Ctrl S - Save
 call CreateShortcut("C-s", ":w<enter>", "nv", "cmdInVisual", "restoreSelectionAfter")
 call CreateShortcut("C-s", ":w<enter>i<right>", "i", "notrailingiininsert")
