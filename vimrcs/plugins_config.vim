@@ -167,9 +167,6 @@ au BufRead,BufNewFile *.h set ft=c
 let g:syntastic_c_remove_include_errors = 1
 let g:syntastic_c_checkers = ['checkpatch', 'gcc']
 
-let g:syntastic_quiet_messages={"level": "warnings"}  "disable warnings
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
