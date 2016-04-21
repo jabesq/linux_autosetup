@@ -1,14 +1,14 @@
-cd ~/linux_autosetup
+cd ${HOME}/linux_autosetup
 
-echo 'set runtimepath+=~/linux_autosetup
+echo 'set runtimepath+=${HOME}/linux_autosetup
 
-source ~/linux_autosetup/vimrcs/basic.vim
-source ~/linux_autosetup/vimrcs/filetypes.vim
-source ~/linux_autosetup/vimrcs/plugins_config.vim
-source ~/linux_autosetup/vimrcs/extended.vim
+source ${HOME}/linux_autosetup/vimrcs/basic.vim
+source ${HOME}/linux_autosetup/vimrcs/filetypes.vim
+source ${HOME}/linux_autosetup/vimrcs/plugins_config.vim
+source ${HOME}/linux_autosetup/vimrcs/extended.vim
 
 try
-source ~/linux_autosetup/my_configs.vim
+source ${HOME}/linux_autosetup/my_configs.vim
 catch
 endtry' > ~/.vimrc
 

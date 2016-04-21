@@ -1,15 +1,14 @@
 #Jabesq's linux bash autosetup
 
 ## How to install the linux auto setup tool?
-
-	git clone https://github.com/jabesq/linux_autosetup.git ~/linux_autosetup
-	sh ~/linux_autosetup/install_linux_autosetup.sh
+	git clone https://github.com/jabesq/linux_autosetup.git ${HOME}/linux_autosetup
+	sh ${HOME}/linux_autosetup/install_linux_autosetup.sh
 
 ## How to update to latest version?
 
 Simply just do a git rebase!
 
-    cd ~/linux_autosetup
+    cd ${HOME}/linux_autosetup
     git pull --rebase
 
 ##Fork from VIMRC
@@ -32,7 +31,7 @@ I also recommend using [Source Code Pro font from Adobe](http://store1.adobe.com
 
 Simply just do a git rebase!
 
-    cd ~/linux_autosetup
+    cd ${HOME}/linux_autosetup
     git pull https://github.com/amix/vimrc.git master --rebase
 
 ## Some screenshots
@@ -99,15 +98,15 @@ Remove all clutter and focus only on the essential. Similar to iA Writer or Writ
 
 ## How to include your own stuff?
 
-After you have installed the setup you can create **~/linux_autosetup/my_configs.vim** to fill in any configurations that are important for you. For instance, my **my_configs.vim** looks like this:
+After you have installed the setup you can create **${HOME}/linux_autosetup/my_configs.vim** to fill in any configurations that are important for you. For instance, my **my_configs.vim** looks like this:
 
-	~/linux_autosetup (master)> cat my_configs.vim
+	${HOME}/linux_autosetup (master)> cat my_configs.vim
 	map <leader>ct :cd ~/Desktop/Todoist/todoist<cr>
 	map <leader>cw :cd ~/Desktop/Wedoist/wedoist<cr> 
 
 You can also install your own plugins, for instance, via pathogen we can install [vim-rails](https://github.com/tpope/vim-rails):
 
-	cd ~/linux_autosetup
+	cd ${HOME}/linux_autosetup
 	git clone git://github.com/tpope/vim-rails.git sources_non_forked/vim-rails
 	
 Now you have vim-rails installed ;-)
