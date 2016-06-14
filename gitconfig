@@ -11,6 +11,7 @@
 [user]
 	name =
 	email =
+	useconfigonly = true
 [alias]
 	lol = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	st = status
@@ -49,3 +50,9 @@
 	autostash = true
 [push]
 	default = simple
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+[interactive]
+	diffFilter = diff-highlight
