@@ -9,7 +9,7 @@ for f in *; do
         if [ $? -eq 0 ]
         then
             echo ${PWD}
-            git fetch --all
+            git pull --ff-only --all
         fi
         cd ${HOME}
     fi
