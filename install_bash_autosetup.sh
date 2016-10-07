@@ -19,6 +19,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     tree --version
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     echo "MINGW32_NT"
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+    echo "MINGW64_NT"
 fi
 
 sh ${HOME}/linux_autosetup/install_awesome_vimrc.sh > /dev/null
