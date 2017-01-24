@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "include ${HOME}/linux_autosetup/ALL.nanorc" > ~/.nanorc
-echo "source ${HOME}/linux_autosetup/bashrc" > ~/.bashrc
+echo "include ${HOME}/bash_autosetup/ALL.nanorc" > ~/.nanorc
+echo "source ${HOME}/bash_autosetup/bashrc" > ~/.bashrc
 
 if [ "$(uname)" == "Darwin" ]; then
     echo "DARWIN"
@@ -23,7 +23,7 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
     echo "MINGW64_NT"
 fi
 
-sh ${HOME}/linux_autosetup/install_awesome_vimrc.sh > /dev/null
+sh ${HOME}/bash_autosetup/install_awesome_vimrc.sh > /dev/null
 
 
 echo "Please enter Git global username, followed by [ENTER]:"

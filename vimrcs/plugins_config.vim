@@ -9,8 +9,8 @@
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
-call pathogen#infect('~/linux_autosetup/sources_forked/{}')
-call pathogen#infect('~/linux_autosetup/sources_non_forked/{}')
+call pathogen#infect('~/bash_autosetup/sources_forked/{}')
+call pathogen#infect('~/bash_autosetup/sources_non_forked/{}')
 call pathogen#helptags()
 
 """"""""""""""""""""""""""""""

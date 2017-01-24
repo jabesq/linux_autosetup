@@ -81,7 +81,7 @@ else
 fi
 }
 
-source ${HOME}/linux_autosetup/git-prompt.sh
+source ${HOME}/bash_autosetup/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="verbose"
@@ -137,7 +137,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Edit this .bashrc file
-alias ebrc='vim ${HOME}/linux_autosetup/bashrc'
+alias ebrc='vim ${HOME}/bash_autosetup/bashrc'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -152,7 +152,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-source ${HOME}/linux_autosetup/git-completion.bash
+source ${HOME}/bash_autosetup/git-completion.bash
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -230,5 +230,5 @@ alias vim='gvim --remote-tab-silent'
 alias nvim='gvim'
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
-export PATH=${HOME}/linux_autosetup/bin:${PATH}
+export PATH=${HOME}/bash_autosetup/bin:${PATH}
 
