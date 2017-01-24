@@ -1,8 +1,8 @@
 #Jabesq's linux bash autosetup
 
 ## How to install the linux auto setup tool?
-	git clone https://github.com/jabesq/linux_autosetup.git ${HOME}/linux_autosetup
-	sh ${HOME}/linux_autosetup/install_linux_autosetup.sh
+	git clone https://github.com/jabesq/bash_autosetup.git ${HOME}/bash_autosetup
+	sh ${HOME}/bash_autosetup/install_bash_autosetup.sh
 
 ## Fonts
 
@@ -18,7 +18,7 @@ Some other fonts that Awesome will try to use:
 
 Simply just do a git rebase!
 
-    cd ${HOME}/linux_autosetup
+    cd ${HOME}/bash_autosetup
     git pull --rebase
     
 I also recommend using [the Hack font](http://sourcefoundry.org/hack/) (it's a free and awesome font designed for source code). The Awesome vimrc is already setup to try to use it.
@@ -35,7 +35,7 @@ I would of course recommend using the awesome version.c
 ## How to install the Awesome version?
 The awesome version includes a lot of great plugins, configurations and color schemes that make Vim a lot better. To install it simply do following:
 
-	sh ~/linux_autosetup/install_awesome_vimrc.sh
+	sh ~/bash_autosetup/install_awesome_vimrc.sh
 
 I also recommend using [Source Code Pro font from Adobe](http://store1.adobe.com/cfusion/store/html/index.cfm?event=displayFontPackage&code=1960) (it's free and awesome font for writing and programming). The Awesome vimrc is already setup to try to use it
 
@@ -45,7 +45,7 @@ If you have vim aliased as `vi` instead of `vim`, make sure to either alias it: 
 
 Just do a git rebase!
 
-    cd ${HOME}/linux_autosetup
+    cd ${HOME}/bash_autosetup
     git pull https://github.com/amix/vimrc.git master --rebase
 
 ## Some screenshots
@@ -110,15 +110,15 @@ Remove all clutter and focus only on the essential. Similar to iA Writer or Writ
 
 ## How to include your own stuff?
 
-After you have installed the setup you can create **${HOME}/linux_autosetup/my_configs.vim** to fill in any configurations that are important for you. For instance, my **my_configs.vim** looks like this:
+After you have installed the setup you can create **${HOME}/bash_autosetup/my_configs.vim** to fill in any configurations that are important for you. For instance, my **my_configs.vim** looks like this:
 
-	${HOME}/linux_autosetup (master)> cat my_configs.vim
+	${HOME}/bash_autosetup (master)> cat my_configs.vim
 	map <leader>ct :cd ~/Desktop/Todoist/todoist<cr>
 	map <leader>cw :cd ~/Desktop/Wedoist/wedoist<cr> 
 
 You can also install your plugins, for instance, via pathogen you can install [vim-rails](https://github.com/tpope/vim-rails):
 
-	cd ${HOME}/linux_autosetup
+	cd ${HOME}/bash_autosetup
 	git clone git://github.com/tpope/vim-rails.git sources_non_forked/vim-rails
 
 
