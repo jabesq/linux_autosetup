@@ -13,7 +13,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         sudo apt-get -q upgrade
     fi
 
-    sudo apt-get install git-all terminator tree diffuse meld ctags gedit-plugins nfs-common vim-gtk gcc gcc-arm-linux-gnueabi build-essential libc6-dev-i386 gtk+2.0 libqt4-dev pkg-config
+    sudo apt -y install git-all terminator tree diffuse meld ctags gedit-plugins nfs-common vim-gtk gcc gcc-arm-linux-gnueabi build-essential libc6-dev-i386 gtk+2.0 libqt4-dev pkg-config
     git --version
     terminator --version
     tree --version
@@ -32,6 +32,6 @@ read name
 echo "Please enter Git global user mail, followed by [ENTER]:"
 read mail
 
-sed 's/name\ \=/name\ \= \'"$name"'/g' gitconfig | sed 's/email\ \=/email\ \= \'"$mail"'/g' > ~/.gitconfig
+sed 's/name\ \=/name\ \= \'"$name"'/g' $HOME/bash_autosetup/gitconfig | sed 's/email\ \=/email\ \= \'"$mail"'/g' > ~/.gitconfig
 echo "Installed the Linux autosetup configuration successfully! Enjoy :-)"
 
