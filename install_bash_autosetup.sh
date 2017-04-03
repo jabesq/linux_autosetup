@@ -10,10 +10,10 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         echo "Updating repository in order to have access to the latest version of Git"
         sudo -E add-apt-repository ppa:git-core/ppa
         sudo apt-get -q update
-        sudo apt-get -q upgrade
+        sudo apt-get -q -y upgrade
     fi
 
-    sudo apt -y install git-all terminator tree diffuse meld ctags gedit-plugins nfs-common vim-gtk gcc gcc-arm-linux-gnueabi build-essential libc6-dev-i386 gtk+2.0 libqt4-dev pkg-config
+    sudo apt -y install git-gui terminator tree diffuse meld ctags gedit-plugins nfs-common vim-gtk gcc gcc-arm-linux-gnueabi build-essential libc6-dev-i386 gtk+2.0 libqt4-dev pkg-config
     git --version
     terminator --version
     tree --version
