@@ -223,7 +223,7 @@ alias e=nvim
 alias ALLupdate='sudo apt-get update && sudo apt-get upgrade -y && \
 sudo apt-get dist-upgrade -y &&  sudo apt-get -y autoremove && \
 sudo apt-get -y autoclean && [ -f /var/run/reboot-required ] && \
-sudo shutdown -r now'
+echo "PLEASE REBOOT YOUR MACHINE"'
 
 alias rebash='exec -l bash'
 alias vim='gvim --remote-tab-silent'
