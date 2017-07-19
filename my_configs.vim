@@ -14,8 +14,8 @@ set number
 "set autowrite      " Automatically save before commands like :next and :make
 set hidden          " Hide buffers when they are abandoned
 set mouse=nv        " Enable mouse usage (all modes)
-set statusline=%<%f%=%([%{Tlist_Get_Tagname_By_Line()}]%)
-set title titlestring=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%)
+"set statusline=%<%f%=%([%{Tlist_Get_Tagname_By_Line()}]%)
+"set title titlestring=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%)
 set cmdheight=1     " 2 doesn't seem to avoid 'press <Enter> to continue'
 set shortmess=atI
 set shm=at          " Short messages. Again, trying to avoid 'press <Enter>'
@@ -72,7 +72,7 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=Grey25 ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Grey25 ctermbg=4
-au VimEnter * IndentGuidesToggle
+"au VimEnter * IndentGuidesToggle
 
 
 " MiniVim Good shortcut

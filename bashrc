@@ -226,6 +226,12 @@ sudo apt-get -y autoclean && [ -f /var/run/reboot-required ] && \
 echo "PLEASE REBOOT YOUR MACHINE"'
 
 alias rebash='exec -l bash'
+
+alias vim='/c/Program\ Files\ \(x86\)/Vim/vim80/vim.exe'
+alias view='/c/Program\ Files\ \(x86\)/Vim/vim80/vim.exe -R'
+alias vimdiff='/c/Program\ Files\ \(x86\)/Vim/vim80/vim.exe -d'
+alias gvim='/c/Program\ Files\ \(x86\)/Vim/vim80/gvim.exe'
+alias gvimdiff='/c/Program\ Files\ \(x86\)/Vim/vim80/gvim.exe -d'
 alias vim='gvim --remote-tab-silent'
 alias nvim='gvim'
 
