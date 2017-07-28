@@ -35,13 +35,24 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi
+
+if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
+fi
+
+#if [ -n "$DISPLAY" -a "$TERM" == "screen" ]; then
+if [ "$TERM" == "screen" ]; then
+    export TERM=screen-256color
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
+    xterm-256color) color_prompt=yes;;
+    screen-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned

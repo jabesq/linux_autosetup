@@ -2,6 +2,7 @@
 
 echo "include ${HOME}/bash_autosetup/ALL.nanorc" > ~/.nanorc
 echo "source ${HOME}/bash_autosetup/bashrc" > ~/.bashrc
+cp ${HOME}/bash_autosetup/tmux.conf ${HOME}/.tmux.conf
 
 if [ "$(uname)" == "Darwin" ]; then
     echo "DARWIN"
