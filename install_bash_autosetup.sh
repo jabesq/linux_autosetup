@@ -14,7 +14,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         sudo apt-get -q upgrade
     fi
 
-    sudo apt -y install git vim-gtk gcc build-essential gtk+2.0 libqt4-dev pkg-config
+    sudo apt -y install git vim-gtk gcc build-essential gtk+2.0 libqt4-dev \
+			pkg-config build-essential libssl-dev libffi-dev python-dev
     git --version
     terminator --version
     tree --version
