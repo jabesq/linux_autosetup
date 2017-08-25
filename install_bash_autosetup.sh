@@ -2,7 +2,7 @@
 
 echo "include ${HOME}/bash_autosetup/ALL.nanorc" > ~/.nanorc
 echo "source ${HOME}/bash_autosetup/bashrc" > ~/.bashrc
-cp ${HOME}/bash_autosetup/tmux.conf ${HOME}/.tmux.conf
+#cp ${HOME}/bash_autosetup/tmux.conf ${HOME}/.tmux.conf
 
 if [ "$(uname)" == "Darwin" ]; then
     echo "DARWIN"
@@ -14,7 +14,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         sudo apt-get -q upgrade
     fi
 
-    sudo apt -y install git-all terminator tree diffuse meld ctags gedit-plugins nfs-common vim-gtk gcc gcc-arm-linux-gnueabi build-essential libc6-dev-i386 gtk+2.0 libqt4-dev pkg-config
+    sudo apt -y install git vim-gtk gcc build-essential gtk+2.0 libqt4-dev pkg-config
     git --version
     terminator --version
     tree --version
