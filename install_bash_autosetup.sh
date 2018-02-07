@@ -7,18 +7,9 @@ echo "source ${HOME}/bash_autosetup/bashrc" > ~/.bashrc
 if [ "$(uname)" == "Darwin" ]; then
     echo "DARWIN"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    if ! grep -q "git-core/ppa" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
-        echo "Updating repository in order to have access to the latest version of Git"
-        sudo -E add-apt-repository ppa:git-core/ppa
-        sudo apt-get -q update
-        sudo apt-get -q upgrade
-    fi
 
     sudo apt -y install git vim-gtk gcc build-essential gtk+2.0 libqt4-dev \
 			pkg-config build-essential libssl-dev libffi-dev python-dev
-    git --version
-    terminator --version
-    tree --version
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     echo "MINGW32_NT"
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
