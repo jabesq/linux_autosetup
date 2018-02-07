@@ -24,7 +24,9 @@ augroup linuxsty
     autocmd!
 
     autocmd FileType c,cpp call s:LinuxConfigure()
-    autocmd FileType diff,kconfig setlocal tabstop=8
+    autocmd FileType diff setlocal ts=8
+    autocmd FileType kconfig setlocal ts=8 sw=8 sts=8 noet
+    autocmd FileType dts setlocal ts=8 sw=8 sts=8 noet
 augroup END
 
 function s:LinuxConfigure()
@@ -76,7 +78,7 @@ function s:LinuxHighlighting()
     highlight default link LinuxError ErrorMsg
 
     syn match LinuxError / \+\ze\t/     " spaces before tab
-    syn match LinuxError /\%81v.\+/     " virtual column 81 and more
+    syn match LinuxError /\%>80v[^()\{\}\[\]<>]\+/ " virtual column 81 and more
 
     " Highlight trailing whitespace, unless we're in insert mode and the
     " cursor's placed right after the whitespace. This prevents us from having
