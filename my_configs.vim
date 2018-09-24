@@ -6,7 +6,7 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
-"set showcmd        " Show (partial) command in status line.
+set showcmd        " Show (partial) command in status line.
 "set ignorecase     " Do case insensitive matching
 "set smartcase      " Do smart case matching
 "set incsearch      " Incremental search
@@ -39,7 +39,7 @@ set matchtime=3     " ... during this time
 set wildmenu
 set ttyfast
 set smartindent
-set cursorline
+"set cursorline
 set virtualedit=onemore
 
 let Tlist_Process_File_Always = 1

@@ -241,5 +241,5 @@ alias vim='gvim --remote-tab-silent'
 alias nvim='gvim'
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
-export PATH=${HOME}/bash_autosetup/bin:${PATH}
+export PATH=${PATH}:${HOME}/bash_autosetup/bin
 
