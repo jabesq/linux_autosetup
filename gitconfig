@@ -26,6 +26,8 @@
 	showtool = "!sh -c 'if [ -z $1 ]; then REVISION=HEAD; else REVISION=$1; fi; git difftool $REVISION~ $REVISION' -"
 	gblame = gui blame
 	hard = reset --hard
+	spr = "!f() { git fetch -fu ${2:-$(git remote |grep ^stash- || echo origin)} refs/pull-requests/$1/from:pr/$1 && git checkout pr/$1; }; f"
+	pr-clean = "!git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 [color "diff"]
 	whitespace = red reverse
 	meta = yellow bold
