@@ -4,7 +4,6 @@ mv ~/.bashrc ~/bashrc.old
 
 echo "include ${HOME}/bash_autosetup/ALL.nanorc" > ~/.nanorc
 echo "source ${HOME}/bash_autosetup/bashrc" > ~/.bashrc
-cp "${HOME}"/bash_autosetup/tmux.conf "${HOME}"/.tmux.conf
 
 if [ "$(uname)" == "Darwin" ]; then
     echo "DARWIN"
@@ -40,5 +39,11 @@ echo "Please enter Git global user mail, followed by [ENTER]:"
 read mail
 
 sed 's/name\ \=/name\ \= \'"$name"'/g' $HOME/bash_autosetup/gitconfig | sed 's/email\ \=/email\ \= \'"$mail"'/g' > ~/.gitconfig
+
+pushd ${HOME}
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+cp "${HOME}"/bash_autosetup/tmux.conf "${HOME}"/.tmux.conf
+popd
+
 echo "Installed the Linux autosetup configuration successfully! Enjoy :-)"
 
