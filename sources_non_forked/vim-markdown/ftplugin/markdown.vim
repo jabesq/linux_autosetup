@@ -609,7 +609,23 @@ if !exists('*s:EditUrlUnderCursor')
                     endif
                 endif
                 let l:url = fnameescape(fnamemodify(expand('%:h').'/'.l:url.l:ext, ':.'))
-                execute 'edit' l:url
+                let l:editmethod = ''
+                " determine how to open the linked file (split, tab, etc)
+                if exists('g:vim_markdown_edit_url_in')
+                  if g:vim_markdown_edit_url_in == 'tab'
+                    let l:editmethod = 'tabnew'
+                  elseif g:vim_markdown_edit_url_in == 'vsplit'
+                    let l:editmethod = 'vsp'
+                  elseif g:vim_markdown_edit_url_in == 'hsplit'
+                    let l:editmethod = 'sp'
+                  else
+                    let l:editmethod = 'edit'
+                  endif
+                else
+                  " default to current buffer
+                  let l:editmethod = 'edit'
+                endif
+                execute l:editmethod l:url
             endif
             if l:anchor != ''
                 silent! execute '/'.l:anchor
@@ -764,10 +780,10 @@ function! s:MarkdownClearSyntaxVariables()
 endfunction
 
 augroup Mkd
-    autocmd!
-    au BufWinEnter * call s:MarkdownRefreshSyntax(1)
-    au BufUnload * call s:MarkdownClearSyntaxVariables()
-    au BufWritePost * call s:MarkdownRefreshSyntax(0)
-    au InsertEnter,InsertLeave * call s:MarkdownRefreshSyntax(0)
-    au CursorHold,CursorHoldI * call s:MarkdownRefreshSyntax(0)
+    autocmd! * <buffer>
+    autocmd BufWinEnter <buffer> call s:MarkdownRefreshSyntax(1)
+    autocmd BufUnload <buffer> call s:MarkdownClearSyntaxVariables()
+    autocmd BufWritePost <buffer> call s:MarkdownRefreshSyntax(0)
+    autocmd InsertEnter,InsertLeave <buffer> call s:MarkdownRefreshSyntax(0)
+    autocmd CursorHold,CursorHoldI <buffer> call s:MarkdownRefreshSyntax(0)
 augroup END

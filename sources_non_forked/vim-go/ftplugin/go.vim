@@ -9,6 +9,10 @@ if exists("b:did_ftplugin")
 endif
 let b:did_ftplugin = 1
 
+" don't spam the user when Vim is started in Vi compatibility mode
+let s:cpo_save = &cpo
+set cpo&vim
+
 let b:undo_ftplugin = "setl fo< com< cms<"
 
 setlocal formatoptions-=t
@@ -42,10 +46,16 @@ endif
 
 if get(g:, "go_textobj_enabled", 1)
   onoremap <buffer> <silent> af :<c-u>call go#textobj#Function('a')<cr>
-  onoremap <buffer> <silent> if :<c-u>call go#textobj#Function('i')<cr>
-
   xnoremap <buffer> <silent> af :<c-u>call go#textobj#Function('a')<cr>
+
+  onoremap <buffer> <silent> if :<c-u>call go#textobj#Function('i')<cr>
   xnoremap <buffer> <silent> if :<c-u>call go#textobj#Function('i')<cr>
+
+  onoremap <buffer> <silent> ac :<c-u>call go#textobj#Comment('a')<cr>
+  xnoremap <buffer> <silent> ac :<c-u>call go#textobj#Comment('a')<cr>
+
+  onoremap <buffer> <silent> ic :<c-u>call go#textobj#Comment('i')<cr>
+  xnoremap <buffer> <silent> ic :<c-u>call go#textobj#Comment('i')<cr>
 
   " Remap ]] and [[ to jump betweeen functions as they are useless in Go
   nnoremap <buffer> <silent> ]] :<c-u>call go#textobj#FunctionJump('n', 'next')<cr>
@@ -58,7 +68,7 @@ if get(g:, "go_textobj_enabled", 1)
   xnoremap <buffer> <silent> [[ :<c-u>call go#textobj#FunctionJump('v', 'prev')<cr>
 endif
 
-if get(g:, "go_auto_type_info", 0) || get(g:, "go_auto_sameids", 0)
+if go#config#AutoTypeInfo() || go#config#AutoSameids()
   let &l:updatetime= get(g:, "go_updatetime", 800)
 endif
 
@@ -129,5 +139,9 @@ endif
 "   call go#guru#ClearSameIds()
 "   return "nohlsearch"
 " endfunction
+
+" restore Vi compatibility settings
+let &cpo = s:cpo_save
+unlet s:cpo_save
 
 " vim: sw=2 ts=2 et
