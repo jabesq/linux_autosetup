@@ -26,6 +26,7 @@
 	amend = commit --amend
 	cleanws = rebase --whitespace=fix
 	ls = show --pretty=oneline --abbrev-commit --name-status
+	lls = log --pretty=oneline --abbrev-commit --name-status
 	showtool = "!sh -c 'if [ -z $1 ]; then REVISION=HEAD; else REVISION=$1; fi; git difftool $REVISION~ $REVISION' -"
 	gblame = gui blame
 	hard = reset --hard
@@ -54,6 +55,8 @@
 	clean = git-stripspace
 [rebase]
 	autostash = true
+	abbreviateCommands = true
+	instructionFormat = -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
 [push]
 	default = simple
 [pager]
@@ -64,3 +67,9 @@
 	diffFilter = diff-highlight
 [help]
 	autocorrect = 10
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
+[fetch]
+	prune = true
