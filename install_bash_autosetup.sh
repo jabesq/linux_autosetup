@@ -20,8 +20,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     sudo apt -y install git git-gui terminator tree diffuse meld ctags \
         gedit-plugins nfs-common vim-gtk gcc gcc-arm-linux-gnueabi\
         build-essential libc6-dev-i386 gtk+2.0 libqt4-dev pkg-config\
-        python3.6 python3.6-minimal python3.6-venv python3-virtualenv\
-        libpython3.6-dev
+        python3.6 python3.6-dev python3.6-minimal python3.6-venv\
+        python3-virtualenv libpython3.6-dev
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     echo "MINGW32_NT"
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
@@ -44,7 +44,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp "${HOME}"/bash_autosetup/tmux.conf "${HOME}"/.tmux.conf
 popd
 
-curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
+curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3.6
 pipsi install black
 pipsi install pre-commit
 pipsi install tox
