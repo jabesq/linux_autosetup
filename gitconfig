@@ -9,8 +9,6 @@
 	branch = auto
 	diff = true
 [user]
-	name =
-	email =
 	useconfigonly = true
 [alias]
 	lol = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
